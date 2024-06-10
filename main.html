@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автосалон </title>
+    <link rel="stylesheet" href="D:\gg\56 css.css">
+    
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 10px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .nav-links a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('https://images.unsplash.com/photo-1542362074-8a158e5c1b39') no-repeat center center/cover;
+            color: #111;
+        }
+        .cta-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .cars {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .car-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .car-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .car-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .car-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        .register-button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .register-button:hover {
+            background-color: #218838;
+        }
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%; 
+            overflow: auto;
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .register-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .register-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .register-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function openModal() {
+            document.getElementById('registerModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('registerModal').style.display = 'none';
+        }
+
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (username === '' || email === '' || password === '') {
+                alert('Будь ласка, заповніть всі поля');
+                return false;
+            }
+
+            if (!email.includes('@')) {
+                alert('Будь ласка, введіть дійсну електронну адресу');
+                return false;
+            }
+
+            return true;
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('registerModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Автосалон "Logic Car "</div>
+            <ul class="nav-links">
+                <li><a href="file:///C:/Users/%D0%84%D0%B2%D0%B3%D0%B5%D0%BD/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D1%81%D0%B0%D0%B9%D1%82/golovna.him.html">Головна</a></li>
+                <li><a href="file:///C:/Users/%D0%84%D0%B2%D0%B3%D0%B5%D0%BD/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D1%81%D0%B0%D0%B9%D1%82/avto.html">Автомобілі</a></li>
+                <li><a href="file:///C:/Users/%D0%84%D0%B2%D0%B3%D0%B5%D0%BD/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D1%81%D0%B0%D0%B9%D1%82/poslyga.html">Послуги</a></li>
+                <li><a href="file:///C:/Users/%D0%84%D0%B2%D0%B3%D0%B5%D0%BD/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D1%81%D0%B0%D0%B9%D1%82/kontakti.html">Контакти</a></li>
+            </ul>
+            <button class="register-button" onclick="openModal()">Реєстрація</button>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Ласкаво просимо до нашого автосалону</h1>
+        <p>Найкращі автомобілі для вас!</p>
+        <button class="cta-button" onclick="alert('В 2024 році було продано близько 150 мільйонів автомобілів. Топ продаж цього сезону становить 1.Рено Меган 100 мільйонів. 2. Пежо 608 75 мільйонів. 3. Заз Таврія 50 мільйонів.')">Дізнатися більше</button>
+    </section>
+    <section class="cars">
+        <h2>Наші автомобілі</h2>
+        <div class="car-card">
+            <img src="C:\Users\Євген\OneDrive\Рабочий стол\bmw-x5-2024-lux-cars.jpeg" alt="Car 1">
+            <h3>Bmw X5</h3>
+            <p>Завдяки характерним пропорціям Sports Activity Vehicle та обробленій поверхні задньої частини BMW X5 є яскравим прикладом елегантної зовнішності, потужної впевненості та широкої функціональності в роботі.Сапуни на передніх бічних панелях BMW X5 також мають сучасний та привабливий дизайн. Вони мають динамічно вигнутий елемент спереду (оздоблений хромованим перламутром у стандартній комплектації або чорним кольором, Новий BMW X5 можна замовити зі спортивним пакетом M як опцію, щоб додати додаткове відчуття ексклюзивного динамізму в ході. Новий BMW X6 робить те саме, оскільки стандартно оснащений пакетом M Sport. </p>
+        </div>
+        <div class="car-card">
+            <img src="C:\Users\Євген\OneDrive\Рабочий стол\mercedes-amg-glc-class.jpeg" alt="Car 2">
+            <h3>Mercedes-AMG GLC-Class</h3>
+            <p>416-сильний GLC43 оснащений чотирициліндровим двигуном з турбонаддувом і 48-вольтовою гібридною системою, а гібридний GLC63 ,  щоб збільшити потужність до 671 поні. Ціна 170.000$ .З 2,0-літровим чотирициліндровим двигуном із турбонаддувом потужністю 416 к.с. Під час нашого тестування GLC300 розігнався до 60 миль/год за 5,6 секунди, тож уявіть, наскільки швидко це буде з 162 кінськими силами більше. Двигун 43 використовує гібридну систему на 48 вольт і стандартно поставляється з повним приводом і дев'ятиступінчастою автоматичною коробкою передач. Найпопулярніша модель GLC63 SE Performance.</p>
+        </div>
+         <div class="car-card">
+            <img src="C:\Users\Євген\OneDrive\Рабочий стол\audi-s5-sportback-800x984.jpg" alt="Car 3">
+            <h3>Audi S5 Sportback</h3>
+            <p>ТИП АВТОМОБІЛЯ передньомоторний, повний привід, 5 місць, 4-дверний хетчбек
+БАЗОВА ЦІНА Premium, $52 895; Premium Plus, $55 395; Престиж, 61 295 дол
+ТИП ДВИГУНА DOHC 24-V-6 з турбонаддувом і проміжним охолодженням, алюмінієвий блок і головки, безпосереднє вприскування палива.
+Об’єм 183 дюймів 3 , 2998 см 3 Потужність 349 к.с. при 6200 об./хв. Крутний момент 369 фунт-фут при 1370 об./хв.
+ТРАНСМІСІЯ 8-ступінчаста автоматична
+РОЗМІРИ Колісна база: 111,1 дюйма Довжина: 187,3 дюйма Ширина: 72,5 дюйма Висота: 54,5 дюйма Об’єм пасажира: 91 фут 3 Об’єм вантажу: 22 фута 3 Споряджена вага ( C/D est): 4050 фунтів.</p>
+        </div>
+        <div class="car-card">
+            <img src="C:\Users\Євген\OneDrive\Рабочий стол\jaguar-f-type-300.jpg" alt="Car 4">
+            <h3>Jaguar F-Type</h3>
+            <p>Поставки F-type 2024 року почнуться навесні, а R-Dynamic P450 — без спеціального пакету — також доступний за ціною від 79 175 доларів. Тим часом 75 P450 коштуватиме 91 175 доларів, тоді як R 75 P575 відніме з вашого банківського рахунку 114 275 доларів, а кабріолетні версії додають 2000 доларів до ціни за кожну модель. Незначні зміни кольору та обробки також відбуваються в усій лінійці для останньої подорожі F-type навколо сонця. Спеціальне видання приносить кілька механічних оновлень, з новими полегшеними задніми поворотними кулаками, більшими колісними підшипниками та переробленими верхніми кульовими шарнірами, які, як стверджує Jaguar, зроблять рульове керування більш комунікабельним.</p>
+        </div>
+        <div class="car-card">
+            <img src="C:\Users\Євген\OneDrive\Рабочий стол\infiniti-qx80.jpg" alt="Car 5 ">
+            <h3>Infiniti QX80</h3>
+            <p>Двигун: 5.6L VK56VD V8 Infiniti QX80 практично не змінився для моделі 2023 року, хоча він отримав кілька нових функцій. Система виїзду зі смуги руху тепер забезпечує тактильний зворотний зв’язок через кермо, а додавання Amazon Alexa дає пасажирам QX80 більш звичний протокол голосових команд. Крім того, для QX80, як і для всіх інших автомобілів у модельному ряду, запроваджено безкоштовний план технічного обслуговування Infiniti Premium Care, який охоплює пункти планового технічного обслуговування протягом перших трьох років, включаючи заміну масла, перевірки, промивання гальмівної рідини тощо. З огляду на те, що навіть ціна QX80 Premium Select середнього рівня не поступається ціні Mercedes-Benz GLS450 і BMW X7 xDrive40.</p>
+        </div>
+        <div class="car-card">
+            <img src="C:\Users\Євген\OneDrive\Рабочий стол\volkswagen-jetta-gli-2023.jpg" alt="Car 6">
+            <h3>Volkswagen Jetta</h3>
+            <p>Volkswagen відкликає 47 651 седан Jetta 2019 і 2020 модельного року, щоб вирішити проблему із запалюванням в автомобілях із традиційним замком запалювання. Згідно з заявою NHTSA, полізапобіжник перемикача може вийти з ладу, що потенційно може призвести до вимкнення електричної системи автомобіля та зупинки двигуна під час руху. Згідно з документами, поданими до NHTSA, у разі виникнення проблеми на приладовій панелі водії побачать два попередження: «Вимкніть запалювання, безпечно зупиніть автомобіль», а потім «будь ласка, обслуговуйте автомобіль». Здається, проблема більш поширена, коли автомобіль експлуатується в зонах з високою температурою, хоча основна причина проблеми все ще досліджується.</p>
+        </div>
+    </section>
+
+    <!-- Modal for Registration -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Реєстрація</h2>
+            <form class="register-form" onsubmit="return validateForm()">
+                <input type="text" id="username" placeholder="Ім'я користувача" required>
+                <input type="email" id="email" placeholder="Електронна пошта" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <button type="submit">Зареєструватися</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

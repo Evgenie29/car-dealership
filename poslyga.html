@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послуги автосалону</title>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .poslyga img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            text-align: center;
+            color: #007bff;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .service-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .service-section button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .service-section button:hover {
+            background-color: #0056b3;
+        }
+        .service-details {
+            display: none;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+        .service-details.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleDetails() {
+            const details = document.querySelector('.service-details');
+            details.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Послуги</h1>
+        </header>
+        <div class="poslyga">
+            <img src="C:\Users\Євген\OneDrive\Рабочий стол\pravila-pokupki-avtomobilya-cherez-avtosalon.jpg" alt="Автосалон">
+            <h3>Перелік Послугів:</h3>
+            <div class="service-section">
+                <button onclick="toggleDetails()">Переглянути послуги</button>
+                <div class="service-details">
+                    <p>Продаж нових автомобілів:
+                        <ul>
+                            <li>Консультації з вибору автомобіля.</li>
+                            <li>Тест-драйв.</li>
+                            <li>Оформлення покупки та фінансування (кредити, лізинг).</li>
+                            <li>Оформлення страхування.</li>
+                            <li>Реєстрація автомобіля в органах державної влади.</li>
+                        </ul>
+                    </p>
+                    <p>Продаж автомобілів з пробігом:
+                        <ul>
+                            <li>Оцінка та прийом автомобілів на комісію або трейд-ін.</li>
+                            <li>Перевірка та підготовка автомобілів до продажу.</li>
+                            <li>Консультації та продаж.</li>
+                        </ul>
+                    </p>
+                    <p>Сервісне обслуговування:
+                        <ul>
+                            <li>Технічне обслуговування та ремонт автомобілів.</li>
+                            <li>Планове ТО.</li>
+                            <li>Ремонт підвіски, двигуна, коробки передач та інших систем автомобіля.</li>
+                            <li>Шиномонтаж і балансування коліс.</li>
+                            <li>Заміна олії та інших технічних рідин.</li>
+                            <li>Ремонт після ДТП.</li>
+                            <li>Виправлення дрібних пошкоджень кузова.</li>
+                            <li>Фарбування автомобілів.</li>
+                        </ul>
+                    </p>
+                    <p>Лізинг і кредитування автомобілів:
+                        <ul>
+                            <li>Оцінка вартості вашого автомобіля.</li>
+                            <li>Обмін на новий або вживаний автомобіль з доплатою.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
